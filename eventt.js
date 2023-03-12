@@ -40,7 +40,7 @@ const makeOliveButton = document.getElementById('make-olive');
             document.body.style.backgroundColor = 'olive';
         })
 
-// option 04 final eta use korbo
+// option 04 final- eta use korbo
 
 document.getElementById('make-goldenRod').addEventListener('click',function(){
     document.body.style.backgroundColor = 'goldenRod';
