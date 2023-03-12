@@ -8,14 +8,43 @@
 </head>
 <body>
     <h1>Final DOM Event Handlers</h1>
+    <h3 id="handler-status">Default text</h3>
+    <p id="input-Text-display">Default input text</p>
+    <input type="text" name="" id="input-field">
+    <button id="btn-update">update</button>
+    <br>
+    <br>
     <button onclick="handelOnClick()">handel event Add onclick function</button>
-
+    <button id="event-listener">handel event button addEventListener</button>
 
 
     <script>
         function handelOnClick(){
-            console.log('button clicked')
+            // 
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'Handeled by function attached on onclick attribute'
         }
+
+        // option 02
+        document.getElementById('event-listener').addEventListener('click',function(){
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'Text updated by add event listener button'
+        })
+
+        // option 02 recap
+
+        document.getElementById('btn-update').addEventListener('click', function(){
+            // console.log('update button clicked')
+            const inputField = document.getElementById('input-field');
+            // console.log(inputField.value);
+            // inputField er por ineer text dile kaj hobe na .value dite hobe
+
+            const inputText = inputField.value;
+            const p = document.getElementById('input-Text-display');
+            p.innerText = inputText;
+            inputField.value = '';
+            // input text k korle hobe na
+        })
     </script>
 </body>
 </html>
