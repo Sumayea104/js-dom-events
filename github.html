@@ -8,18 +8,18 @@
 </head>
 <body>
     <h1 id="secret-info">my secret info</h1>
-    <input id="delete-confirm" type="text" placeholder="delete">
+    <input id="delete-confirm" type="text" placeholder="please type delete">
     <button id="btn-delete" disabled>delete</button>
     <script>
-        document.getElementById('delete-confirm').addEventListener('keyup', function(event){
-            const text = event.target.value ;
+        document.getElementById('delete-confirm').addEventListener('keyup',function(event){
+            const text = event.target.value;
+            // console.log(text);
             const deleteButton = document.getElementById('btn-delete')
-            // consol.log(text);
             if(text === 'delete'){
                 deleteButton.removeAttribute('disabled')
             }
             else{
-                deleteButton
+                deleteButton.setAttribute('disabled', true)
             }
         })
         document.getElementById('btn-delete').addEventListener('click', function(){
