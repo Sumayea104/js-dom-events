@@ -9,10 +9,16 @@
 <body>
     <h1>Explore more events</h1>
     <button id="btn-more">events</button>
+    <input type="text" name="" id="text-field">
     <script>
         document.getElementById('btn-more').addEventListener('mousemove', function(){
-            console.log('event triggered')
+            // console.log('event triggered')
         })
+
+        document.getElementById('text-field').addEventListener('blur',function(){
+            console.log('event triggered inside input filled blur')
+        })
+        // focus er opposite blur
     </script>
 </body>
 </html>
